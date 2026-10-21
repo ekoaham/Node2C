@@ -1,0 +1,31 @@
+SYSTEM mysystem;
+PROCESS pid2;
+PROCESSDEF pid2
+START
+    BLOCK myblock1
+    START
+        int x = 104867;
+        int ans = 0;
+    END
+
+    DECISION mydec1
+        IF x > 0
+        THEN
+        GOTO myblock2
+        ELSE
+        GOTO myblock8
+
+
+    BLOCK myblock2
+    START
+        x = x/10;
+        ans++;
+    END
+    GOTO mydec1
+    
+    
+    BLOCK myblock8
+        START
+            printf("%d\n",ans);
+        END
+END

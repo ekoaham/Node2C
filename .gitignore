@@ -1,0 +1,18 @@
+# Compiled binaries
+code/parser
+code/a.out
+code/*.out
+output.c
+
+# Lex and Yacc intermediate generated files
+code/lex.yy.c
+code/y.tab.c
+code/y.tab.h
+
+# Object files and core dumps
+code/*.o
+*.core
+
+# OS & Editor files
+.vscode/
+.DS_Store
